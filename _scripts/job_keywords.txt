@@ -1,0 +1,3 @@
+# Job Seeking - Keyword filter (one per line, # for comments)
+# Used when filtering job listings. Leave empty to show all.
+# Examples: Python, 北京, Shanghai, 后端, AI, 远程

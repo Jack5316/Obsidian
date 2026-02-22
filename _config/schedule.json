@@ -1,0 +1,21 @@
+{
+  "tasks": [
+    {
+      "id": "daily-curation",
+      "target": "org-daily",
+      "target_type": "skill",
+      "schedule": "daily",
+      "time": "09:00",
+      "enabled": true
+    },
+    {
+      "id": "weekly-synthesis",
+      "target": "org-weekly",
+      "target_type": "skill",
+      "schedule": "weekly",
+      "day": "monday",
+      "time": "10:00",
+      "enabled": true
+    }
+  ]
+}

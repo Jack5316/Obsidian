@@ -1,0 +1,176 @@
+============================================================
+ORGANIZATION SKILL EXECUTION LOG
+============================================================
+Start Time: 2026-02-19 09:04:56
+Total Scripts: 5
+Skipped: 0
+Ran: 6
+Successful: 3
+Failed: 3
+Total Duration: 11.77 seconds
+
+DETAILED EXECUTION RESULTS
+--------------------------
+
+Script: reddit_digest.py
+Description: Reddit content digestion and summarization
+Start Time: 2026-02-19 09:04:48
+End Time: 2026-02-19 09:04:49
+Duration: 1.06 seconds
+Status: SUCCESS
+Output:
+Fetching from 5 subreddits...
+  Warning: Could not fetch r/MachineLearning: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/MachineLearning/hot.json?limit=10&t=week (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  r/MachineLearning: 0 posts
+  Warning: Could not fetch r/philosophy: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/philosophy/hot.json?limit=10&t=week (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  r/philosophy: 0 posts
+  Warning: Could not fetch r/chipdesign: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/chipdesign/hot.json?limit=10&t=week (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  r/chipdesign: 0 posts
+  Warning: Could not fetch r/LocalLLaMA: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/LocalLLaMA/hot.json?limit=10&t=week (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  r/LocalLLaMA: 0 posts
+  Warning: Could not fetch r/FPGA: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/FPGA/hot.json?limit=10&t=week (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  r/FPGA: 0 posts
+No posts found.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: hn_newsletter.py
+Description: Hacker News newsletter creation
+Start Time: 2026-02-19 09:04:48
+End Time: 2026-02-19 09:04:49
+Duration: 1.07 seconds
+Status: FAILED
+Output:
+Fetching top 15 Hacker News stories...
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hacker-news.firebaseio.com', port=443): Max retries exceeded with url: /v0/topstories.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/hn_newsletter.py", line 147, in <module>
+    main()
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/hn_newsletter.py", line 75, in main
+    story_ids = fetch_top_stories(args.top)
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/hn_newsletter.py", line 30, in fetch_top_stories
+    resp = requests.get(f"{HN_API}/topstories.json", timeout=10)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/requests/adapters.py", line 671, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='hacker-news.firebaseio.com', port=443): Max retries exceeded with url: /v0/topstories.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+----------------------------------------
+
+Script: twitter_capture.py
+Description: Twitter content capture and summarization
+Start Time: 2026-02-19 09:04:48
+End Time: 2026-02-19 09:04:49
+Duration: 1.08 seconds
+Status: SUCCESS
+Output:
+Fetching tweets from 2 accounts (last 24h)...
+  Warning: Could not fetch tweets for @AndrewYNg: HTTPSConnectionPool(host='syndication.twitter.com', port=443): Max retries exceeded with url: /srv/timeline-profile/screen-name/AndrewYNg (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  @AndrewYNg: 0 tweets
+  Warning: Could not fetch tweets for @kaboris: HTTPSConnectionPool(host='syndication.twitter.com', port=443): Max retries exceeded with url: /srv/timeline-profile/screen-name/kaboris (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+  @kaboris: 0 tweets
+No tweets found in the time window.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: arxiv_digest.py
+Description: ArXiv paper curation and summarization
+Start Time: 2026-02-19 09:04:48
+End Time: 2026-02-19 09:04:49
+Duration: 1.15 seconds
+Status: SUCCESS
+Output:
+Searching ArXiv for 5 topics (last 7 days)...
+  Warning: ArXiv query failed for 'large language model': 403 Client Error: Forbidden for url: http://export.arxiv.org/api/query?search_query=all%3A%22large+language+model%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending
+  'large language model': 0 papers
+  Warning: ArXiv query failed for 'transformer architecture': 403 Client Error: Forbidden for url: http://export.arxiv.org/api/query?search_query=all%3A%22transformer+architecture%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending
+  'transformer architecture': 0 papers
+  Warning: ArXiv query failed for 'VLSI design': 403 Client Error: Forbidden for url: http://export.arxiv.org/api/query?search_query=all%3A%22VLSI+design%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending
+  'VLSI design': 0 papers
+  Warning: ArXiv query failed for 'integrated circuit': 403 Client Error: Forbidden for url: http://export.arxiv.org/api/query?search_query=all%3A%22integrated+circuit%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending
+  'integrated circuit': 0 papers
+  Warning: ArXiv query failed for 'philosophy of mind': 403 Client Error: Forbidden for url: http://export.arxiv.org/api/query?search_query=all%3A%22philosophy+of+mind%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending
+  'philosophy of mind': 0 papers
+No papers found. Try increasing --days or adjusting topics.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: tophub_news_simple.py
+Description: Simple TopHub news scraping
+Start Time: 2026-02-19 09:04:48
+End Time: 2026-02-19 09:04:53
+Duration: 5.10 seconds
+Status: FAILED
+Output:
+Fetching news from https://tophub.today...
+Attempt 1: Error - HTTPSConnectionPool(host='tophub.today', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+Attempt 2: Error - HTTPSConnectionPool(host='tophub.today', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+Error: Failed to fetch page content after multiple attempts
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: daily_synthesis.py
+Description: Daily cross-domain synthesis
+Start Time: 2026-02-19 09:04:53
+End Time: 2026-02-19 09:04:56
+Duration: 2.30 seconds
+Status: FAILED
+Output:
+Collecting today's source notes...
+Found 11 notes:
+  Concept Digest - 2026-02-19 (concept-digest)
+  Vault Analytics - 2026-02-19 (unknown)
+  Podcast Digest - 2026-02-19 (podcast-digest)
+  Skill Package Analysis - 2026-02-19 (unknown)
+  GitHub Digest - 2026-02-19 (github-digest)
+  Job Digest - 2026-02-19 (job-digest)
+  Alpha Vantage Digest - 2026-02-19 (alpha-vantage-digest)
+  Knowledge Graph - 2026-02-19 (unknown)
+  Skills Digest - 2026-02-19 (unknown)
+  Crypto Market Digest - 2026-02-19 (crypto-digest)
+  Link Analyzer Report - 2026-02-19 (unknown)
+Generating daily synthesis with AI...
+Error: Connection error.
+
+----------------------------------------

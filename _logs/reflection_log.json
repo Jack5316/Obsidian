@@ -1,0 +1,1038 @@
+[
+  {
+    "timestamp": "2026-02-17T09:30:35.130340",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-17T09:30:50.070707",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "success",
+    "metrics": {
+      "count": 5
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:33:31.681359",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:33:40.755503",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "success",
+    "metrics": {
+      "count": 5
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:34:57.345033",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:35:02.672123",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "failed",
+    "metrics": {
+      "error": "Failed to extract any news items from the page"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:42:23.886187",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:42:29.140669",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "failed",
+    "metrics": {
+      "error": "Failed to extract any news items from the page"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:44:30.160302",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:45:43.194867",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "success",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:46:48.233047",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T08:47:56.407052",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "success",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T09:04:34.959033",
+    "script": "weekly_synthesis.py",
+    "operation": "generate_synthesis",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T09:05:13.300897",
+    "script": "weekly_synthesis.py",
+    "operation": "generate_synthesis",
+    "status": "success",
+    "metrics": {
+      "days": 7,
+      "notes_processed": 6,
+      "note_types": [
+        "hn-newsletter",
+        "news-digest",
+        "reddit-digest",
+        "arxiv-digest"
+      ],
+      "output_file": "Sources/Weekly Synthesis - 2026-02-18.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T09:38:10.494884",
+    "script": "bilibili_summary.py",
+    "operation": "summarize_video",
+    "status": "in_progress",
+    "metrics": {
+      "url_or_id": "https://www.bilibili.com/video/BV1Ax61BeEfS/?spm_id_from=333.1007.tianma.2-3-6.click&vd_source=456a2f6c07add272603e372751086708"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T09:38:10.637041",
+    "script": "bilibili_summary.py",
+    "operation": "summarize_video",
+    "status": "failed",
+    "metrics": {
+      "url_or_id": "https://www.bilibili.com/video/BV1Ax61BeEfS/?spm_id_from=333.1007.tianma.2-3-6.click&vd_source=456a2f6c07add272603e372751086708"
+    },
+    "error": "Bilibili API error: \u5565\u90fd\u6728\u6709"
+  },
+  {
+    "timestamp": "2026-02-18T09:38:17.361721",
+    "script": "bilibili_summary.py",
+    "operation": "summarize_video",
+    "status": "in_progress",
+    "metrics": {
+      "url_or_id": "BV1Ax61BeEfS"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T09:38:36.009196",
+    "script": "bilibili_summary.py",
+    "operation": "summarize_video",
+    "status": "success",
+    "metrics": {
+      "url_or_id": "BV1Ax61BeEfS",
+      "bvid": "BV1Ax61BeEfS",
+      "title": "\u4eba\u5927\u6559\u6388\u8042\u8f89\u534e\uff1a\u7edd\u5927\u591a\u6570\u4e2d\u56fd\u4eba\uff0c\u538b\u6839\u4e0d\u61c2\u6743\u529b\u600e\u4e48\u8fd0\u4f5c",
+      "uploader": "\u51c9\u5b50\u8bbf\u8c08\u5f55",
+      "duration": 1077,
+      "views": 1563064,
+      "likes": 60211,
+      "has_subtitles": false,
+      "subtitle_length": 0,
+      "note_path": "/Users/jack/Documents/Obsidian/AI_Vault/Sources/Bilibili - \u4eba\u5927\u6559\u6388\u8042\u8f89\u534e\u7edd\u5927\u591a\u6570\u4e2d\u56fd\u4eba\u538b\u6839\u4e0d\u61c2\u6743\u529b\u600e\u4e48\u8fd0\u4f5c.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T23:53:01.694533",
+    "script": "essay.py",
+    "operation": "essay",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 60
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T23:53:28.851536",
+    "script": "essay.py",
+    "operation": "essay",
+    "status": "success",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 60,
+      "notes_processed": 1,
+      "output_file": "Atlas/Essay - inverse problems.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T23:55:43.987253",
+    "script": "thread_from_insights.py",
+    "operation": "thread",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 7
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-18T23:55:55.835280",
+    "script": "thread_from_insights.py",
+    "operation": "thread",
+    "status": "success",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 7,
+      "notes_processed": 2,
+      "output_file": "Sources/Thread - inverse problems.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:01:41.453224",
+    "script": "concept_extract.py",
+    "operation": "concept",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 60
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:01:56.403043",
+    "script": "concept_extract.py",
+    "operation": "concept",
+    "status": "success",
+    "metrics": {
+      "topic": "inverse problems",
+      "days": 60,
+      "notes_processed": 2,
+      "output_file": "Sources/Concept Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:06:29.864666",
+    "script": "flashcard_generate.py",
+    "operation": "flashcard",
+    "status": "in_progress",
+    "metrics": {
+      "path": "Atlas/Essay - inverse problems.md",
+      "topic": null
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:06:34.835605",
+    "script": "flashcard_generate.py",
+    "operation": "flashcard",
+    "status": "success",
+    "metrics": {
+      "output": "Sources/Flashcards - Essay - inverse problems.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:08:11.701491",
+    "script": "debate_steelman.py",
+    "operation": "debate",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "inverse problems in life decisions"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T00:08:35.912129",
+    "script": "debate_steelman.py",
+    "operation": "debate",
+    "status": "success",
+    "metrics": {
+      "topic": "inverse problems in life decisions",
+      "output_file": "Atlas/Debate - inverse problems in life decisions.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:23:58.896305",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "in_progress",
+    "metrics": {
+      "stocks": 1
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:24:38.876589",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "success",
+    "metrics": {
+      "stocks": 1,
+      "output_file": "Sources/Alpha Vantage Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:26:16.747477",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "in_progress",
+    "metrics": {
+      "stocks": 1
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:26:58.821409",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "success",
+    "metrics": {
+      "stocks": 1,
+      "output_file": "Sources/Alpha Vantage Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:36:13.551104",
+    "script": "crypto_market.py",
+    "operation": "fetch_crypto_data",
+    "status": "in_progress",
+    "metrics": {
+      "cryptos": 2
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:36:29.762487",
+    "script": "crypto_market.py",
+    "operation": "fetch_crypto_data",
+    "status": "success",
+    "metrics": {
+      "cryptos": 2,
+      "output_file": "Sources/Crypto Market Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:38:06.566021",
+    "script": "github_digest.py",
+    "operation": "fetch_github_activity",
+    "status": "in_progress",
+    "metrics": {
+      "repos": 1
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:38:35.991964",
+    "script": "github_digest.py",
+    "operation": "fetch_github_activity",
+    "status": "success",
+    "metrics": {
+      "repos": 1,
+      "output_file": "Sources/GitHub Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:42:15.050750",
+    "script": "podcast_digest.py",
+    "operation": "fetch_podcasts",
+    "status": "in_progress",
+    "metrics": {
+      "days": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:42:44.271207",
+    "script": "podcast_digest.py",
+    "operation": "fetch_podcasts",
+    "status": "success",
+    "metrics": {
+      "podcasts": 2,
+      "output_file": "Sources/Podcast Digest - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:45:39.973394",
+    "script": "mem_capture.py",
+    "operation": "capture_memory",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:45:39.974151",
+    "script": "mem_capture.py",
+    "operation": "capture_memory",
+    "status": "success",
+    "metrics": {
+      "destination": "00 - Inbox/Memory - 05:45 - 2026-02-19.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:52:44.887067",
+    "script": "concept_extract.py",
+    "operation": "concept",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "AI Engineering",
+      "days": 365
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:52:53.333392",
+    "script": "essay.py",
+    "operation": "essay",
+    "status": "in_progress",
+    "metrics": {
+      "topic": "Distinguish basic concept in AI Engineering, such as function call, tool call, skill, agent, memory, MCP, plugin etc.",
+      "days": 1
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T05:53:23.572651",
+    "script": "essay.py",
+    "operation": "essay",
+    "status": "success",
+    "metrics": {
+      "topic": "Distinguish basic concept in AI Engineering, such as function call, tool call, skill, agent, memory, MCP, plugin etc.",
+      "days": 1,
+      "notes_processed": 12,
+      "output_file": "Atlas/Essay - Distinguish basic concept in AI Engineering such a.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T06:24:24.469494",
+    "script": "flomo_send.py",
+    "operation": "send_to_flomo",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T06:24:26.958794",
+    "script": "flomo_send.py",
+    "operation": "send_to_flomo",
+    "status": "success",
+    "metrics": {
+      "content_length": 82
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:00:06.636279",
+    "script": "deepseek_chat.py",
+    "operation": "deepseek_chat",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:00:09.697693",
+    "script": "deepseek_chat.py",
+    "operation": "deepseek_chat",
+    "status": "success",
+    "metrics": {
+      "prompt_length": 40,
+      "response_length": 190
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:28:47.453359",
+    "script": "socrates.py",
+    "operation": "socratic_inquiry",
+    "status": "in_progress",
+    "metrics": {
+      "question": "What is wisdom?"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:29:04.986460",
+    "script": "socrates.py",
+    "operation": "socratic_inquiry",
+    "status": "success",
+    "metrics": {
+      "question": "What is wisdom?",
+      "saved": false
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:35:31.969942",
+    "script": "deepseek_chat.py",
+    "operation": "deepseek_chat",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:35:38.184139",
+    "script": "deepseek_chat.py",
+    "operation": "deepseek_chat",
+    "status": "success",
+    "metrics": {
+      "prompt_length": 65,
+      "response_length": 41
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:58:47.436085",
+    "script": "ai_insight.py",
+    "operation": "ai_insight",
+    "status": "in_progress",
+    "metrics": {
+      "focus": null,
+      "days": 7
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T07:58:49.467823",
+    "script": "ai_insight.py",
+    "operation": "ai_insight",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:12:49.178815",
+    "script": "job_seeking.py",
+    "operation": "job_digest",
+    "status": "success",
+    "metrics": {
+      "count": 5
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:20:06.702657",
+    "script": "rag_query.py",
+    "operation": "rag_query",
+    "status": "in_progress",
+    "metrics": {
+      "query": "What is this vault about?",
+      "mode": "naive"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:20:06.727999",
+    "script": "rag_query.py",
+    "operation": "rag_query",
+    "status": "failed",
+    "metrics": {
+      "error": "No matches"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:20:10.431471",
+    "script": "rag_query.py",
+    "operation": "rag_query",
+    "status": "in_progress",
+    "metrics": {
+      "query": "Obsidian vault",
+      "mode": "naive"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:20:12.810784",
+    "script": "rag_query.py",
+    "operation": "rag_query",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:22:50.192359",
+    "script": "deep_research.py",
+    "operation": "deep_research",
+    "status": "in_progress",
+    "metrics": {
+      "query": "AI agents"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:22:52.148185",
+    "script": "deep_research.py",
+    "operation": "deep_research",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:25:33.042479",
+    "script": "inverse.py",
+    "operation": "inverse",
+    "status": "in_progress",
+    "metrics": {
+      "type": "problem",
+      "input": "I can't find time to exercise"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:25:34.749725",
+    "script": "inverse.py",
+    "operation": "inverse",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:25:38.370850",
+    "script": "inverse.py",
+    "operation": "inverse",
+    "status": "in_progress",
+    "metrics": {
+      "type": "problem",
+      "input": "I can't find time to exercise"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:25:51.377524",
+    "script": "inverse.py",
+    "operation": "inverse",
+    "status": "success",
+    "metrics": {
+      "type": "problem",
+      "saved": false
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:30:03.995527",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:30:06.993584",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:32:19.415039",
+    "script": "filter_query.py",
+    "operation": "filter_query",
+    "status": "in_progress",
+    "metrics": {
+      "query": "Alpha Vantage"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T08:32:19.441600",
+    "script": "filter_query.py",
+    "operation": "filter_query",
+    "status": "success",
+    "metrics": {
+      "notes_retrieved": 3,
+      "passages_returned": 3
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T09:04:49.490573",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": "default"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T09:04:49.504765",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "in_progress",
+    "metrics": {
+      "count": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T09:04:53.852195",
+    "script": "tophub_news_simple.py",
+    "operation": "scrape_news",
+    "status": "failed",
+    "metrics": {
+      "error": "Failed to fetch page content after multiple attempts"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T09:04:54.230846",
+    "script": "daily_synthesis.py",
+    "operation": "daily_synthesis",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T09:04:56.149991",
+    "script": "daily_synthesis.py",
+    "operation": "daily_synthesis",
+    "status": "failed",
+    "metrics": {
+      "error": "Connection error."
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T10:34:02.514298",
+    "script": "agent_news.py",
+    "operation": "fetch_agent_news",
+    "status": "in_progress",
+    "metrics": {
+      "topic": null,
+      "use_api": false,
+      "limit": 3
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-19T10:34:18.528586",
+    "script": "agent_news.py",
+    "operation": "fetch_agent_news",
+    "status": "success",
+    "metrics": {
+      "count": 6,
+      "sources": 2
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:25:42.848666",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": "default"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:34:43.678638",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": 1
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:35:15.866804",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "success",
+    "metrics": {
+      "days": 7,
+      "topics": 1,
+      "papers_found": 10,
+      "output_file": "Sources/ArXiv Digest - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:36:21.272923",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:39:31.448409",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "success",
+    "metrics": {
+      "notes_processed": 4,
+      "output_file": "Sources/AI Brief - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:39:31.929221",
+    "script": "ai_insight.py",
+    "operation": "ai_insight",
+    "status": "in_progress",
+    "metrics": {
+      "focus": null,
+      "days": 90
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:40:59.970321",
+    "script": "ai_insight.py",
+    "operation": "ai_insight",
+    "status": "success",
+    "metrics": {
+      "focus": null,
+      "days": 90,
+      "notes_processed": 48,
+      "output_file": "Atlas/AI Insight - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:41:00.876268",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "in_progress",
+    "metrics": {
+      "stocks": 5
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:43:37.880402",
+    "script": "alpha_vantage.py",
+    "operation": "fetch_stock_data",
+    "status": "success",
+    "metrics": {
+      "stocks": 5,
+      "output_file": "Sources/Alpha Vantage Digest - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:43:40.027423",
+    "script": "book_notes.py",
+    "operation": null,
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:43:41.137912",
+    "script": "concept_extract.py",
+    "operation": "concept",
+    "status": "in_progress",
+    "metrics": {
+      "topic": null,
+      "days": 30
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:44:11.942386",
+    "script": "concept_extract.py",
+    "operation": "concept",
+    "status": "success",
+    "metrics": {
+      "topic": null,
+      "days": 30,
+      "notes_processed": 49,
+      "output_file": "Sources/Concept Digest - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:44:25.521296",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:44:25.864957",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": "default"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:45:35.552361",
+    "script": "ai_brief.py",
+    "operation": "ai_brief",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:45:35.906584",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": "default"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:46:41.922289",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "success",
+    "metrics": {
+      "days": 7,
+      "topics": 5,
+      "papers_found": 26,
+      "output_file": "Sources/ArXiv Digest - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:46:44.886131",
+    "script": "arxiv_digest.py",
+    "operation": "curate_papers",
+    "status": "in_progress",
+    "metrics": {
+      "days": 7,
+      "topics": "default"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:49:24.938208",
+    "script": "daily_synthesis.py",
+    "operation": "daily_synthesis",
+    "status": "in_progress",
+    "metrics": {},
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T11:49:34.302323",
+    "script": "daily_synthesis.py",
+    "operation": "daily_synthesis",
+    "status": "success",
+    "metrics": {
+      "notes_processed": 7,
+      "note_types": [
+        "concept-digest",
+        "reddit-digest",
+        "arxiv-digest",
+        "unknown",
+        "ai-brief",
+        "hn-newsletter",
+        "alpha-vantage-digest"
+      ],
+      "output_file": "Sources/Daily Synthesis - 2026-02-20.md"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T20:22:24.422207",
+    "script": "deep_research.py",
+    "operation": "deep_research",
+    "status": "in_progress",
+    "metrics": {
+      "query": "RAG vs fine-tuning"
+    },
+    "error": null
+  },
+  {
+    "timestamp": "2026-02-20T20:23:46.692267",
+    "script": "deep_research.py",
+    "operation": "deep_research",
+    "status": "success",
+    "metrics": {
+      "query": "RAG vs fine-tuning",
+      "methodology": true,
+      "saved": false
+    },
+    "error": null
+  }
+]

@@ -1,0 +1,20 @@
+# Obsidian workspace settings (device-specific, causes conflicts)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace-mobile-backup.json
+
+# Plugin caches and data that shouldn't sync
+.obsidian/plugins/obsidian-git/data.json
+
+# macOS system files
+.DS_Store
+.trash/
+
+# Remotely Save plugin (contains embedded OAuth secrets that trigger GitHub push protection)
+.obsidian/plugins/remotely-save/
+
+# Environment variables (may contain API keys)
+.env
+
+# Python coverage data
+.coverage

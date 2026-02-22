@@ -1,0 +1,588 @@
+{
+  "skills": {
+    "org": {
+      "description": "Run all automation + reflect on the system. Use this skill to organize your Obsidian vault by executing all available scripts and performing self-reflection.",
+      "commands": [
+        "python3 _scripts/org_skill.py"
+      ]
+    },
+    "org-daily": {
+      "description": "Run daily automation scripts (ArXiv, HN, Reddit, news, Twitter).",
+      "commands": [
+        "python3 _scripts/org_skill.py --daily"
+      ]
+    },
+    "org-weekly": {
+      "description": "Run weekly automation scripts (weekly synthesis, self-reflection).",
+      "commands": [
+        "python3 _scripts/org_skill.py --weekly"
+      ]
+    },
+    "org-list": {
+      "description": "List all available automation scripts.",
+      "commands": [
+        "python3 _scripts/org_skill.py --list"
+      ]
+    },
+    "org-status": {
+      "description": "Check script execution status and recent runs.",
+      "commands": [
+        "python3 _scripts/org_skill.py --status"
+      ]
+    },
+    "org-logs": {
+      "description": "View recent script execution logs.",
+      "commands": [
+        "python3 _scripts/org_skill.py --logs"
+      ]
+    },
+    "ai-brief": {
+      "description": "Morning brew of AI news worth your time. Fetches ArXiv, HN, Reddit, skills.sh and synthesizes an AI-focused brief. Use when you want your daily AI digest, morning AI news, or /ai-brief.",
+      "commands": [
+        "python3 _scripts/ai_brief.py"
+      ]
+    },
+    "arxiv": {
+      "description": "Curate recent ArXiv papers by topic into an Obsidian digest note.",
+      "commands": [
+        "python3 _scripts/arxiv_digest.py"
+      ]
+    },
+    "hn": {
+      "description": "Create Hacker News newsletter digest.",
+      "commands": [
+        "python3 _scripts/hn_newsletter.py"
+      ]
+    },
+    "reddit": {
+      "description": "Curate and summarize content from Reddit.",
+      "commands": [
+        "python3 _scripts/reddit_digest.py"
+      ]
+    },
+    "news": {
+      "description": "Scrape and summarize Chinese news from tophub.today.",
+      "commands": [
+        "python3 _scripts/tophub_news_simple.py"
+      ]
+    },
+    "twitter": {
+      "description": "Capture and summarize Twitter content.",
+      "commands": [
+        "python3 _scripts/twitter_capture.py"
+      ]
+    },
+    "bookmark": {
+      "description": "Process saved URLs into structured notes in your Obsidian vault.",
+      "commands": [
+        "python3 _scripts/bookmark_process.py"
+      ]
+    },
+    "cubox-rss": {
+      "description": "Automate RSS subscription to Cubox. Syncs RSS feeds to Cubox for reading. Use when you want to auto-save RSS items to Cubox, /cubox-rss, or Cubox RSS automation.",
+      "commands": [
+        "python3 _scripts/cubox_rss.py"
+      ]
+    },
+    "book": {
+      "description": "Manage and generate book notes from AI or Kindle clippings.",
+      "commands": [
+        "python3 _scripts/book_notes.py"
+      ]
+    },
+    "movie": {
+      "description": "Create movie notes with review, quotes, cast, and plot summary.",
+      "commands": [
+        "python3 _scripts/movie_notes.py"
+      ]
+    },
+    "person": {
+      "description": "Create and manage person profiles for people you follow or study.",
+      "commands": [
+        "python3 _scripts/person_profile.py"
+      ]
+    },
+    "project": {
+      "description": "Track ongoing personal projects with logging and status updates.",
+      "commands": [
+        "python3 _scripts/project_track.py"
+      ]
+    },
+    "goal": {
+      "description": "Track and review goals against daily/weekly synthesis logs.",
+      "commands": [
+        "python3 _scripts/goal_track.py"
+      ]
+    },
+    "habit": {
+      "description": "Log and analyze behavioral patterns and habit tracking.",
+      "commands": [
+        "python3 _scripts/habit_track.py"
+      ]
+    },
+    "meeting": {
+      "description": "Structure notes and action items from meeting conversations.",
+      "commands": [
+        "python3 _scripts/meeting_notes.py"
+      ]
+    },
+    "weekly": {
+      "description": "Generate weekly cross-source content synthesis for your Obsidian vault.",
+      "commands": [
+        "python3 _scripts/weekly_synthesis.py"
+      ]
+    },
+    "daily-synthesis": {
+      "description": "Generate daily cross-domain synthesis of your notes and insights.",
+      "commands": [
+        "python3 _scripts/daily_synthesis.py"
+      ]
+    },
+    "essay": {
+      "description": "Write long-form essays from accumulated insights in your vault.",
+      "commands": [
+        "python3 _scripts/essay.py"
+      ]
+    },
+    "concept": {
+      "description": "Extract and define recurring concepts across your reading and notes.",
+      "commands": [
+        "python3 _scripts/concept_extract.py"
+      ]
+    },
+    "connect": {
+      "description": "Find relationships between notes, ideas, and concepts in your vault.",
+      "commands": [
+        "python3 _scripts/knowledge_graph.py"
+      ]
+    },
+    "rag": {
+      "description": "Retrieval-Augmented Generation over your Obsidian vault. Query your knowledge base with hybrid retrieval (keyword + graph expansion via wikilinks). Inspired by LightRAG. Use when you want to ask questions about your notes, search your vault with AI synthesis, or /rag.",
+      "commands": [
+        "python3 _scripts/rag_query.py"
+      ]
+    },
+    "filter": {
+      "description": "Precision RAG search over your Obsidian vault. Find exactly and precisely the relevant information on a topic using multi-strategy retrieval, passage-level chunking, and AI reranking. Use when you need exact matches, precise extraction, or to filter vault content to only what's relevant.",
+      "commands": [
+        "python3 _scripts/filter_query.py"
+      ]
+    },
+    "deep-research": {
+      "description": "Multi-step deep research orchestration inspired by OpenAI Deep Research and HKUDS (AI-Researcher, Auto-Deep-Research, AutoAgent). Produces comprehensive reports from vault RAG, external sources, and steelmanned opposing views. Use when user asks for deep research, comprehensive report, thorough investigation, or /deep-research.",
+      "commands": [
+        "python3 _scripts/deep_research.py"
+      ]
+    },
+    "debate": {
+      "description": "Steelman opposing views on topics you're exploring to strengthen your understanding.",
+      "commands": [
+        "python3 _scripts/debate_steelman.py"
+      ]
+    },
+    "flashcard": {
+      "description": "Generate spaced repetition flashcards from your content for effective learning.",
+      "commands": [
+        "python3 _scripts/flashcard_generate.py"
+      ]
+    },
+    "thread": {
+      "description": "Convert insights into Twitter/X threads for sharing your knowledge.",
+      "commands": [
+        "python3 _scripts/thread_from_insights.py"
+      ]
+    },
+    "official-wechat-publisher": {
+      "description": "Publish articles to WeChat Official Account (微信公众号) quickly. Converts Obsidian notes to WeChat-compatible format for paste or API draft. Use when you want to publish to 公众号, 微信公众平台, or Weixin Gongzhonghao.",
+      "commands": [
+        "python3 _scripts/wechat_official_publish.py"
+      ]
+    },
+    "md2wechat": {
+      "description": "Write and format WeChat Official Account (微信公众号) articles. Markdown → WeChat HTML with themes (default, bytedance, chinese, apple, sports). Use when you want to write 公众号 articles, format for WeChat, md2wechat, or publish to 微信公众平台.",
+      "commands": [
+        "python3 _scripts/md2wechat_skill.py"
+      ]
+    },
+    "skill-grab": {
+      "description": "Collect latest best skills from skills.sh to enhance your capabilities.",
+      "commands": [
+        "python3 _scripts/skill_grab.py"
+      ]
+    },
+    "product-hunt": {
+      "description": "Find the best shiny new tools from Product Hunt. Fetches the daily feed, curates top products with AI, and saves a digest to your vault. Use when you want to discover new tools, check what's trending on Product Hunt, or /product-hunt.",
+      "commands": [
+        "python3 _scripts/product_hunt.py"
+      ]
+    },
+    "api": {
+      "description": "Find the best database and API interfaces for a particular subject. Recommends databases, REST/GraphQL APIs, SDKs, and data interfaces for any topic or use case. Use when you need APIs for a domain, want database recommendations, or /api.",
+      "commands": [
+        "python3 _scripts/api_finder.py"
+      ]
+    },
+    "til": {
+      "description": "Today I Learned quick capture for fleeting knowledge moments.",
+      "commands": [
+        "python3 _scripts/til_capture.py"
+      ]
+    },
+    "question": {
+      "description": "Capture open questions for future research and investigation.",
+      "commands": [
+        "python3 _scripts/question_capture.py"
+      ]
+    },
+    "job-seeking": {
+      "description": "Aggregate latest job listings from V2EX 酷工作 and RemoteOK for China job search. Use when user asks for job digest, job listings, 招聘, 找工作, or /job-seeking.",
+      "commands": [
+        "python3 _scripts/job_seeking.py"
+      ]
+    },
+    "dictionary": {
+      "description": "Search Longman Dictionary of Contemporary English (LDOCE) for word meaning, etymology (origin), and corpus examples. Use when user asks to look up a word, check definition, etymology, or /dictionary.",
+      "commands": [
+        "python3 _scripts/dictionary.py"
+      ]
+    },
+    "wiki": {
+      "description": "Quickly learn about anything using the Feynman technique, presented as a wiki-style tutorial. Use when user wants to learn a topic, understand something, get a tutorial, or /wiki.",
+      "commands": [
+        "python3 _scripts/wiki.py"
+      ]
+    },
+    "quotes": {
+      "description": "Find inspirational quotes by subject or from famous people. Uses Quotable.io plus AI for movie lines. Use when user asks for quotes, inspirational quotes, famous quotes, movie lines, quotes by topic/author, or /quotes.",
+      "commands": [
+        "python3 _scripts/quotes.py"
+      ]
+    },
+    "prompt": {
+      "description": "Generate well-structured and orchestrated prompts. Create prompts with clear role, context, task, output format, and constraints. Apply templates to content, design multi-step workflows, or generate custom prompts from descriptions. Use when you need prompt engineering, structured prompts, or /prompt.",
+      "commands": [
+        "python3 _scripts/prompt_skill.py"
+      ]
+    },
+    "alignment": {
+      "description": "Update a skill in a strategic, reflective, purposeful, and systematic way. Analyzes skills through the ALIGNMENT framework and produces actionable improvement recommendations. Use when you want to refine a skill, improve skill quality, or align a skill with PAI framework.",
+      "commands": [
+        "python3 _scripts/alignment_skill.py"
+      ]
+    },
+    "gateway": {
+      "description": "Skill map and integration guide. Tracks skills, relationships, FCLG (Functions, Connections, Limitations, Guidance). Use when creating a new skill, navigating skills, understanding relationships, or /gateway.",
+      "commands": [
+        "python3 _scripts/gateway.py"
+      ]
+    },
+    "scheduler": {
+      "description": "Automate and schedule tasks (skills/pipelines) to run automatically. Uses launchd on macOS. Use when user asks to schedule tasks, automate execution, run skills automatically, or /scheduler.",
+      "commands": [
+        "python3 _scripts/scheduler.py"
+      ]
+    },
+    "things": {
+      "description": "Add and manage actionable items in Things (macOS) via URL scheme. Add to-dos, projects, update tasks. Use when user asks to add tasks to Things, create to-dos, or /things.",
+      "commands": [
+        "python3 _scripts/things.py"
+      ]
+    },
+    "notify": {
+      "description": "Send macOS system notifications. Use for pipeline/scheduler completion alerts. Use when user asks to notify, send notification, or /notify.",
+      "commands": [
+        "python3 _scripts/notify.py"
+      ]
+    },
+    "web-fetch": {
+      "description": "Fetch URL and extract content as markdown. Generic URL-to-markdown. Use when user asks to fetch URL, extract web content, or /web-fetch.",
+      "commands": [
+        "python3 _scripts/web_fetch.py"
+      ]
+    },
+    "web-search": {
+      "description": "Search the web via Brave Search API. Use when user asks to search the web, web search, or /web-search.",
+      "commands": [
+        "python3 _scripts/web_search.py"
+      ]
+    },
+    "zen": {
+      "description": "Grounding, presence, and intentional focus skill for mindful productivity.",
+      "commands": [
+        "python3 _scripts/self_reflection.py reflect"
+      ]
+    },
+    "reflect": {
+      "description": "Generate self-reflection report and save as Obsidian note.",
+      "commands": [
+        "python3 _scripts/self_reflection.py reflect --save"
+      ]
+    },
+    "evolve": {
+      "description": "Run system self-evolution and improvement cycle.",
+      "commands": [
+        "python3 _scripts/self_evolution.py cycle"
+      ]
+    },
+    "insights": {
+      "description": "Run iterative insight enhancement cycle for continuous system improvement.",
+      "commands": [
+        "python3 _scripts/insight_enhancement.py"
+      ]
+    },
+    "review": {
+      "description": "Monthly/quarterly system review to assess overall health and effectiveness.",
+      "commands": [
+        "python3 _scripts/review_system.py"
+      ]
+    },
+    "obsidian-vault": {
+      "description": "Comprehensive vault analytics and health monitoring. Analyze file statistics, tags, links, tasks, and overall vault health. Use when asked about vault statistics, health, analytics, or to check the state of the Obsidian vault.",
+      "commands": [
+        "python3 _scripts/obsidian_vault_analytics.py --save"
+      ]
+    },
+    "obsidian-tasks": {
+      "description": "Advanced task management using Obsidian's native task system. List tasks, filter by status, manage priorities, add tasks to daily notes, and track completion rates. Use when asked about tasks, todos, task management, or to check what needs to be done.",
+      "commands": [
+        "python3 _scripts/obsidian_task_manager.py"
+      ]
+    },
+    "obsidian-links": {
+      "description": "Knowledge graph and link structure analysis. Detect orphan files, dead-ends, unresolved links, find central hubs, and assess overall link health. Use when asked about links, graph connectivity, orphans, or knowledge graph health.",
+      "commands": [
+        "python3 _scripts/obsidian_link_analyzer.py --save"
+      ]
+    },
+    "second-brain-audit": {
+      "description": "Second brain audit — vault health + PARA check. Runs obsidian-vault, obsidian-links, obsidian-tasks, knowledge-graph, and clean. Use when user asks for second brain audit, vault health check, PARA audit, knowledge base audit, or /second-brain-audit.",
+      "commands": [
+        "python3 _scripts/pipeline.py --run second-brain-audit"
+      ]
+    },
+    "clean": {
+      "description": "Find and remove redundant notes with your permission. Detects exact duplicates, empty/stub notes, and optional near-duplicates. Always asks before removing. Use when you want to clean the vault, remove duplicates, or declutter notes.",
+      "commands": [
+        "python3 _scripts/clean_redundant.py scan"
+      ]
+    },
+    "memory": {
+      "description": "Memory Consolidator - Persist information to LLM/Agent memory. Add preferences, facts, patterns, and workflows to your LLM Context folder for Kilo Code and AI assistants to remember permanently. Use when asked to remember something, save a preference, or store information for later.",
+      "commands": [
+        "python3 _scripts/memory_consolidator.py --summary"
+      ]
+    },
+    "random-walk": {
+      "description": "Explore your Obsidian vault through serendipitous discovery. Randomly selects notes, traces connection paths, and suggests research directions. Use when you want to discover forgotten insights, find unexpected connections, or need inspiration for research topics.",
+      "commands": [
+        "python3 _scripts/random_walk.py --save"
+      ]
+    },
+    "deepseek": {
+      "description": "Chat with DeepSeek API for cost-effective AI conversations. Use DeepSeek to reduce model usage costs while maintaining high-quality AI responses. Use when user says \"deepseek\", \"/deepseek\", or wants a cost-effective AI conversation.",
+      "commands": [
+        "python3 _scripts/deepseek_chat.py"
+      ]
+    },
+    "mole": {
+      "description": "Mole Mac Storage Cleaner - Clean your Mac storage by removing temporary files, caches, logs, and other unnecessary files. Inspired by https://github.com/tw93/Mole. Use when user asks to clean Mac storage, free up disk space, or clean cache/log files.",
+      "commands": [
+        "python3 _scripts/mole_cleaner.py"
+      ]
+    },
+    "diverge": {
+      "description": "Divergent thinking skill - exploratory idea generation, branching exploration, cross-domain connections, and creative brainstorming. Use when you want to expand possibilities, generate many ideas, explore different directions, or make unexpected connections.",
+      "commands": [
+        "python3 _scripts/diverge.py"
+      ]
+    },
+    "converge": {
+      "description": "Convergent thinking skill - synthesis, prioritization, decision making, and actionable next steps. Use when you need to narrow down options, make decisions, prioritize, find patterns, or identify concrete next steps.",
+      "commands": [
+        "python3 _scripts/converge.py"
+      ]
+    },
+    "thinking-pattern": {
+      "description": "Decode the thinking pattern underlying your writing. Analyzes text to reveal reasoning style, argument structure, cognitive frameworks, assumptions, and blind spots. Use when you want to understand how you think by examining what you write, or /thinking-pattern.",
+      "commands": [
+        "python3 _scripts/thinking_pattern.py"
+      ]
+    },
+    "curl": {
+      "description": "Information curation skill - gather, filter, organize, and synthesize information from multiple sources in your Obsidian vault. Use when you want to collect information on a topic, build reading lists, organize knowledge, or synthesize what you've learned.",
+      "commands": [
+        "python3 _scripts/curl.py"
+      ]
+    },
+    "gradient": {
+      "description": "Gradient descent inspired iterative refinement - gradually improve ideas, text, and solutions through multiple refinement cycles. Use when you want to iteratively improve something, get constructive critique, compare versions, or progressively enhance your work.",
+      "commands": [
+        "python3 _scripts/gradient.py"
+      ]
+    },
+    "source": {
+      "description": "Find the best Substack, newsletter, blog, Twitter post, podcast, wiki, article, YouTube video on a particular subject. Use when user asks for content recommendations, wants to learn about a topic, or needs the best sources on any subject.",
+      "commands": [
+        "python3 _scripts/source_finder.py"
+      ]
+    },
+    "meta-skill": {
+      "description": "Create new skills following the PAI framework guidelines from CLAUDE.md. Generates Python script templates, SKILL.md files, and guides you through the complete skill creation process.",
+      "commands": [
+        "python3 _scripts/meta_skill.py"
+      ]
+    },
+    "socrates": {
+      "description": "Socratic questioning method to explore and deepen understanding of a question or topic. Use the SOCRATES framework to uncover assumptions, clarify concepts, and reveal implications through thoughtful inquiry.",
+      "commands": [
+        "python3 _scripts/socrates.py"
+      ]
+    },
+    "pyq": {
+      "description": "Generate WeChat Moments (朋友圈) copywriting with hackable templates. Use when user asks for \"发朋友圈\", \"pyq\", \"wechat moments\", or \"/pyq\".",
+      "commands": [
+        "python3 _scripts/wechat_pyq.py"
+      ]
+    },
+    "ackup": {
+      "description": "Backup System - Comprehensive backup for personal AI infrastructure. Backup files, docs, important thoughts, AI system, profile, and memory. Use when you need to backup your Obsidian vault, AI configuration, personal profile, or memory.",
+      "commands": [
+        "python3 _scripts/backup_system.py --save"
+      ]
+    },
+    "school": {
+      "description": "Discover interesting facts and celebrate your alma maters - Xi'an Jiaotong-Liverpool University (XJTLU) and University College London (UCL). Use when you want to learn about your schools, their history, notable alumni, achievements, or just feel a sense of school pride.",
+      "commands": [
+        "python3 _scripts/school_info.py"
+      ]
+    },
+    "knowledge-graph": {
+      "description": "Comprehensive knowledge graph overview of your Obsidian vault. Visualize directory structure, file categories, knowledge hubs, thematic tags, and overall vault architecture. Use when you want a holistic picture of your knowledge graph, vault structure, or to understand how your knowledge is organized.",
+      "commands": [
+        "python3 _scripts/knowledge_graph.py --save"
+      ]
+    },
+    "ai-insight": {
+      "description": "Gain self-knowledge from vault data. Analyzes your notes across mindset, cognitive models, exploration frameworks, and key influences. Use when you want to understand yourself better, get a self-knowledge report, inner conflicts, values clarification, MBTI analysis, CBT/ACT insights, or /ai-insight.",
+      "commands": [
+        "python3 _scripts/ai_insight.py"
+      ]
+    },
+    "joke": {
+      "description": "Generate dad jokes (冷笑话) with a sense of humor. Creates punny, cheesy jokes on any topic. Use when user wants a joke, dad joke, 冷笑话, or /joke.",
+      "commands": [
+        "python3 _scripts/joke.py"
+      ]
+    },
+    "pipeline": {
+      "description": "Combine skills into sequential workflows. Run multiple skills in order, use named pipelines, or pick random skills. Use when you want to chain skills, run a workflow, create a pipeline, or /pipeline.",
+      "commands": [
+        "python3 _scripts/pipeline.py"
+      ]
+    },
+    "perspective": {
+      "description": "Analyze a problem through different thinkers' mindsets — Klaas, Wittgenstein, Naval, Hegel, Plato, Socrates, Seneca, Marcus Aurelius, Nietzsche, Confucius, Taleb, Munger, Arendt, Aristotle. Use when you want multiple perspectives, to think like different philosophers, or /perspective.",
+      "commands": [
+        "python3 _scripts/perspective.py"
+      ]
+    },
+    "inverse": {
+      "description": "Inverse thinking — compute reversely for problems, decisions, actions, and confusions. Inspired by linear algebra's inverse matrix and Charlie Munger's 'invert, always invert.' Use when you want to flip a problem, reverse a decision, undo an action, or dissolve confusion.",
+      "commands": [
+        "python3 _scripts/inverse.py"
+      ]
+    },
+    "alpha": {
+      "description": "Fetch and analyze stock market data using Alpha Vantage API.",
+      "commands": [
+        "python3 _scripts/alpha_vantage.py"
+      ]
+    },
+    "crypto": {
+      "description": "Fetch and analyze cryptocurrency market data using CoinGecko API.",
+      "commands": [
+        "python3 _scripts/crypto_market.py"
+      ]
+    },
+    "github": {
+      "description": "Fetch and digest GitHub activity from specified repositories.",
+      "commands": [
+        "python3 _scripts/github_digest.py"
+      ]
+    },
+    "podcast": {
+      "description": "Fetch and curate podcast episodes from RSS feeds.",
+      "commands": [
+        "python3 _scripts/podcast_digest.py"
+      ]
+    },
+    "email": {
+      "description": "Email digest skill (placeholder - configure IMAP or email API).",
+      "commands": [
+        "python3 _scripts/email_digest.py"
+      ]
+    },
+    "mem": {
+      "description": "Quick memory capture for fleeting thoughts without context switching.",
+      "commands": [
+        "python3 _scripts/mem_capture.py"
+      ]
+    },
+    "package": {
+      "description": "Analyze the status, health, completeness, and pipelines of your current skill configuration.",
+      "commands": [
+        "python3 _scripts/package_skill.py --save"
+      ]
+    },
+    "mental-model": {
+      "description": "Use Charlie Munger's multi mental model methodology to make better decisions based on important academic theories in basic subjects.",
+      "commands": []
+    },
+    "personalization": {
+      "description": "Build and manage your self-model in the digital world - remembers preferences, avoids dislikes, and personalizes interactions (e.g., 'I don't like crypto noise').",
+      "commands": []
+    },
+    "flomo": {
+      "description": "Send notes to flomo floating notes via webhook. Use when user says 'flomo', 'send to flomo', 'floating note', or /flomo.",
+      "commands": [
+        "python3 _scripts/flomo_send.py"
+      ]
+    },
+    "templater": {
+      "description": "Quickly create Obsidian templates. Create templates from built-in types (daily, meeting, project, permanent, fleeting) or generate custom templates from descriptions. Use when you want to create an Obsidian template, add a new note template, or /templater.",
+      "commands": [
+        "python3 _scripts/templater_skill.py"
+      ]
+    },
+    "article": {
+      "description": "Summarize articles and web content into structured notes.",
+      "commands": [
+        "python3 _scripts/article_summary.py"
+      ]
+    },
+    "bear-blog": {
+      "description": "Publish Obsidian notes to BearBlog.",
+      "commands": [
+        "python3 _scripts/bearblog_publish.py"
+      ]
+    },
+    "bilibili": {
+      "description": "Summarize Bilibili video content.",
+      "commands": [
+        "python3 _scripts/bilibili_summary.py"
+      ]
+    },
+    "youtube": {
+      "description": "Summarize YouTube videos.",
+      "commands": [
+        "python3 _scripts/youtube_summary.py"
+      ]
+    },
+    "nanobot": {
+      "description": "Leverage nanobot — ultra-lightweight personal AI assistant from HKUDS. Chat via nanobot agent, check status, start gateway, list skills. Use when user wants nanobot, /nanobot, or to interact with their nanobot assistant.",
+      "commands": [
+        "python3 _scripts/nanobot_skill.py"
+      ]
+    }
+  }
+}

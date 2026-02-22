@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# md2wechat wrapper — fixes digest 120-char bug when using --draft --cover
+# Usage: md2wechat convert FILE --draft --cover COVER [--theme THEME]
+# For other commands, delegates to md2wechat-bin (installed alongside).
+
+BIN_DIR="$(cd "$(dirname "$0")" && pwd)"
+REAL_BINARY="$BIN_DIR/md2wechat-bin"
+[[ ! -x "$REAL_BINARY" ]] && REAL_BINARY=""
+
+run_draft_flow() {
+  local file="" cover="" theme="default"
+  local args=("$@")
+  local i=0
+  while [[ $i -lt ${#args[@]} ]]; do
+    case "${args[$i]}" in
+      --cover) cover="${args[$((i+1))]}"; ((i+=2)) ;;
+      --theme) theme="${args[$((i+1))]}"; ((i+=2)) ;;
+      --draft) ((i++)) ;;
+      -*) ((i++)) ;;
+      *) [[ -z "$file" ]] && file="${args[$i]}"; ((i++)) ;;
+    esac
+  done
+  
+  [[ -z "$file" ]] && { echo "Error: No markdown file specified"; exit 1; }
+  [[ -z "$cover" ]] && { echo "Error: --cover required for --draft"; exit 1; }
+  [[ ! -f "$cover" ]] && { echo "Error: Cover file not found: $cover"; exit 1; }
+  
+  # Find vault: wrapper may be in vault/_scripts or in ~/.local/bin
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  if [[ -f "$SCRIPT_DIR/md2wechat_skill.py" ]]; then
+    VAULT_PATH="$(cd "$SCRIPT_DIR/.." && pwd)"
+  else
+    # Installed to ~/.local/bin; use PWD as vault (run from vault root)
+    VAULT_PATH="${PWD}"
+    if [[ ! -f "$VAULT_PATH/_scripts/md2wechat_skill.py" ]]; then
+      echo "Error: Run from vault root: cd /path/to/vault && md2wechat convert file.md --draft --cover path"
+      exit 1
+    fi
+    SCRIPT_DIR="$VAULT_PATH/_scripts"
+  fi
+  cd "$VAULT_PATH"
+  exec python3 "$SCRIPT_DIR/md2wechat_skill.py" "$file" --api --cover "$cover" --theme "$theme"
+}
+
+case "${1:-}" in
+  convert)
+    if [[ "$*" == *"--draft"* && "$*" == *"--cover"* ]]; then
+      shift  # remove "convert"
+      run_draft_flow "$@"
+    fi
+    ;;
+esac
+
+# Delegate to real binary
+if [[ -n "$REAL_BINARY" && -x "$REAL_BINARY" ]]; then
+  exec "$REAL_BINARY" "$@"
+else
+  echo "Error: md2wechat binary not found. Install: python3 _scripts/md2wechat_skill.py install"
+  exit 1
+fi

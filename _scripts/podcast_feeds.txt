@@ -1,0 +1,2 @@
+# Podcast Feeds - format: Name | RSS URL
+Lex Fridman Podcast | https://lexfridman.com/feed/podcast/

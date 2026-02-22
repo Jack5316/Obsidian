@@ -1,0 +1,7 @@
+# ArXiv search topics (one per line)
+# Papers matching these will be included in digests
+large language model
+transformer architecture
+VLSI design
+integrated circuit
+philosophy of mind

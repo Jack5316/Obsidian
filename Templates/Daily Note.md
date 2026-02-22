@@ -1,0 +1,47 @@
+---
+created: "{{date:YYYY-MM-DD}}"
+tags:
+  - type/daily
+---
+
+# {{date:dddd, MMMM D, YYYY}}
+
+## Morning Intention
+
+> What's the one thing that matters most today?
+
+
+
+## Tasks
+
+### Must Do
+- [ ]
+
+### Should Do
+- [ ]
+
+### Could Do
+- [ ]
+
+## Notes & Captures
+
+> Quick thoughts throughout the day. Process into proper notes later.
+
+-
+
+## Learnings
+
+> What did I learn about AI today?
+
+-
+
+## End of Day
+
+### What went well?
+-
+
+### What to improve?
+-
+
+### Inbox items to process?
+- [ ] Check [[00 - Inbox/Start Here|Inbox]]

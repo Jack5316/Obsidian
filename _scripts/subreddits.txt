@@ -1,0 +1,6 @@
+# Subreddits to track (one per line, with or without r/ prefix)
+MachineLearning
+philosophy
+chipdesign
+LocalLLaMA
+FPGA

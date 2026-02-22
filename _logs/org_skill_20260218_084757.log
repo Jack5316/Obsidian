@@ -1,0 +1,129 @@
+============================================================
+ORGANIZATION SKILL EXECUTION LOG
+============================================================
+Start Time: 2026-02-18 08:47:57
+Total Scripts: 5
+Skipped: 0
+Ran: 5
+Successful: 5
+Failed: 0
+Total Duration: 203.62 seconds
+
+DETAILED EXECUTION RESULTS
+--------------------------
+
+Script: twitter_capture.py
+Description: Twitter content capture and summarization
+Start Time: 2026-02-18 08:46:45
+End Time: 2026-02-18 08:46:50
+Duration: 4.80 seconds
+Status: SUCCESS
+Output:
+Fetching tweets from 2 accounts (last 24h)...
+  @AndrewYNg: 0 tweets
+  @kaboris: 0 tweets
+No tweets found in the time window.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: hn_newsletter.py
+Description: Hacker News newsletter creation
+Start Time: 2026-02-18 08:46:45
+End Time: 2026-02-18 08:47:16
+Duration: 31.61 seconds
+Status: SUCCESS
+Output:
+Fetching top 15 Hacker News stories...
+  [ 803⬆] Claude Sonnet 4.6
+  [ 295⬆] Thank HN: You helped save 33k lives
+  [ 249⬆] Show HN: AsteroidOS 2.0 – Nobody asked, we shipped anyway
+  [ 118⬆] BarraCUDA Open-source CUDA compiler targeting AMD GPUs
+  [ 242⬆] Gentoo on Codeberg
+  [ 264⬆] Using go fix to modernize Go code
+  [   5⬆] Rathbun's Operator
+  [  64⬆] I swear the UFO is coming any minute
+  [ 150⬆] So you want to build a tunnel
+  [ 147⬆] Async/Await on the GPU
+  [  72⬆] Physicists Make Electrons Flow Like Water
+  [1045⬆] GrapheneOS – Break Free from Google and Apple
+  [  18⬆] pg_background: Make Postgres do the long work (while your session stays light)
+  [   1⬆] Structured AI (YC F25) Is Hiring
+  [  50⬆] Assistant to the Regional Manager
+Generating newsletter with AI...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/HN Newsletter - 2026-02-18.md
+Done!
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: reddit_digest.py
+Description: Reddit content digestion and summarization
+Start Time: 2026-02-18 08:46:45
+End Time: 2026-02-18 08:47:27
+Duration: 42.03 seconds
+Status: SUCCESS
+Output:
+Fetching from 5 subreddits...
+  r/MachineLearning: 8 posts
+  r/philosophy: 8 posts
+  r/chipdesign: 10 posts
+  r/LocalLLaMA: 8 posts
+  r/FPGA: 9 posts
+Generating digest with AI (43 posts)...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/Reddit Digest - 2026-02-18.md
+Done! 43 posts digested.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: arxiv_digest.py
+Description: ArXiv paper curation and summarization
+Start Time: 2026-02-18 08:46:45
+End Time: 2026-02-18 08:47:38
+Duration: 53.46 seconds
+Status: SUCCESS
+Output:
+Searching ArXiv for 5 topics (last 7 days)...
+  'large language model': 10 papers
+  'transformer architecture': 10 papers
+  'VLSI design': 0 papers
+  'integrated circuit': 4 papers
+  'philosophy of mind': 0 papers
+Generating digest with AI (24 papers)...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/ArXiv Digest - 2026-02-18.md
+Done! 24 papers digested.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: tophub_news_simple.py
+Description: Simple TopHub news scraping
+Start Time: 2026-02-18 08:46:45
+End Time: 2026-02-18 08:47:57
+Duration: 71.73 seconds
+Status: SUCCESS
+Output:
+Fetching news from https://tophub.today...
+Found 30 news items
+Generating AI summary for 30 items...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/News Digest - Comprehensive - 2026-02-18.md
+Digest saved to Sources/News Digest - Comprehensive - 2026-02-18.md
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------

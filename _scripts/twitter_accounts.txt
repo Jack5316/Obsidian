@@ -1,0 +1,4 @@
+# Twitter/X accounts to track (one @handle per line)
+# Lines starting with # are comments
+@AndrewYNg
+@kaboris

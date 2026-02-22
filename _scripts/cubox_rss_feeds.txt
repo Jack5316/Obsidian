@@ -1,0 +1,5 @@
+# Cubox RSS Feeds - format: Feed Name | RSS URL | Folder (optional)
+# Folder defaults to "RSS" if omitted
+# Example: Hacker News | https://hnrss.org/frontpage | HN
+Hacker News | https://hnrss.org/frontpage | HN
+Lex Fridman Podcast | https://lexfridman.com/feed/podcast/ | Podcasts

@@ -1,0 +1,142 @@
+============================================================
+ORGANIZATION SKILL EXECUTION LOG
+============================================================
+Start Time: 2026-02-17 09:31:19
+Total Scripts: 5
+Skipped: 0
+Ran: 5
+Successful: 3
+Failed: 2
+Total Duration: 107.43 seconds
+
+DETAILED EXECUTION RESULTS
+--------------------------
+
+Script: twitter_capture.py
+Description: Twitter content capture and summarization
+Start Time: 2026-02-17 09:30:33
+End Time: 2026-02-17 09:30:36
+Duration: 3.21 seconds
+Status: SUCCESS
+Output:
+Fetching tweets from 2 accounts (last 24h)...
+  @AndrewYNg: 0 tweets
+  @kaboris: 0 tweets
+No tweets found in the time window.
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: arxiv_digest.py
+Description: ArXiv paper curation and summarization
+Start Time: 2026-02-17 09:30:33
+End Time: 2026-02-17 09:30:49
+Duration: 16.06 seconds
+Status: FAILED
+Output:
+Searching ArXiv for 5 topics (last 7 days)...
+  'large language model': 10 papers
+  'transformer architecture': 10 papers
+  'VLSI design': 0 papers
+  'integrated circuit': 3 papers
+  'philosophy of mind': 0 papers
+Generating digest with AI (23 papers)...
+Error: Error code: 429 - {'error': {'code': 'AccountQuotaExceeded', 'message': 'You have exceeded the 5-hour usage quota. It will reset at 2026-02-17 11:10:18 +0800 CST. We recommend upgrading your plan for more quota, or waiting for the reset. Request id: 0217712918485443683317075330b6cc9f64af0089ac7f94f1deb', 'param': '', 'type': 'TooManyRequests'}}
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: tophub_news_simple.py
+Description: Simple TopHub news scraping
+Start Time: 2026-02-17 09:30:33
+End Time: 2026-02-17 09:30:50
+Duration: 16.52 seconds
+Status: SUCCESS
+Output:
+Fetching news from https://tophub.today...
+Found 5 news items
+Generating AI summary for 5 items...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/News Digest - Comprehensive - 2026-02-17.md
+Digest saved to Sources/News Digest - Comprehensive - 2026-02-17.md
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
+
+Script: reddit_digest.py
+Description: Reddit content digestion and summarization
+Start Time: 2026-02-17 09:30:33
+End Time: 2026-02-17 09:30:59
+Duration: 26.03 seconds
+Status: FAILED
+Output:
+Fetching from 5 subreddits...
+  r/MachineLearning: 8 posts
+  r/philosophy: 8 posts
+  r/chipdesign: 10 posts
+  r/LocalLLaMA: 8 posts
+  r/FPGA: 9 posts
+Generating digest with AI (43 posts)...
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/reddit_digest.py", line 171, in <module>
+    main()
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/reddit_digest.py", line 112, in main
+    digest_body = summarize(posts_text, DIGEST_PROMPT)
+  File "/Users/jack/Documents/Obsidian/AI_Vault/_scripts/config.py", line 28, in summarize
+    response = ai.chat.completions.create(
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/jack/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'code': 'AccountQuotaExceeded', 'message': 'You have exceeded the 5-hour usage quota. It will reset at 2026-02-17 11:10:18 +0800 CST. We recommend upgrading your plan for more quota, or waiting for the reset. Request id: 0217712918594410ce6f61182d61ff41021c175780e66346023e1', 'param': '', 'type': 'TooManyRequests'}}
+
+----------------------------------------
+
+Script: hn_newsletter.py
+Description: Hacker News newsletter creation
+Start Time: 2026-02-17 09:30:33
+End Time: 2026-02-17 09:31:19
+Duration: 45.60 seconds
+Status: SUCCESS
+Output:
+Fetching top 15 Hacker News stories...
+  [  36⬆] Dark web agent spotted bedroom wall clue to rescue girl from abuse
+  [ 233⬆] Study: Self-generated Agent Skills are useless
+  [ 395⬆] 14-year-old Miles Wu folded origami pattern that holds 10k times its own weight
+  [  32⬆] AI is destroying Open Source, and it's not even good yet
+  [  42⬆] Show HN: Scanned 1927-1945 Daily USFS Work Diary
+  [  71⬆] Rise of the Triforce
+  [  85⬆] Show HN: Free Alternative to Wispr Flow, Superwhisper, and Monologue
+  [  60⬆] Testing Postgres race conditions with synchronization barriers
+  [  55⬆] Running NanoClaw in a Docker Shell Sandbox
+  [ 299⬆] What your Bluetooth devices reveal
+  [ 119⬆] Visual Introduction to PyTorch
+  [  11⬆] Show HN: Andrej Karpathy's microgpt.py to C99 microgpt.c – 4,600x faster
+  [  56⬆] State of Show HN: 2025
+  [  24⬆] PascalABC.net
+  [   1⬆] Turing Labs (YC W20) Is Hiring – Founding GTM Sales Hacker
+Generating newsletter with AI...
+Saved: /Users/jack/Documents/Obsidian/AI_Vault/Sources/HN Newsletter - 2026-02-17.md
+Done!
+
+Error:
+/Users/jack/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+----------------------------------------
