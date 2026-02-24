@@ -114,27 +114,36 @@ def save_used_quotes(used_quotes: set):
     except Exception as e:
         print(f"  (Failed to save used quotes: {e})")
 
-def fetch_random_quote() -> Optional[dict]:
+def fetch_random_quote(quote_type: Optional[str] = None) -> Optional[dict]:
     """Fetch a random quote from Quotable.io API or local database if API fails.
-    Ensures no repeated quotes by tracking used ones."""
+    Ensures no repeated quotes by tracking used ones.
+    
+    Args:
+        quote_type: Type of quote to fetch (e.g., "诗词" for poems only, None for all types)
+    """
     used_quotes = load_used_quotes()
     local_quotes = load_local_quotes()
     
+    # 过滤引用类型
+    if quote_type:
+        available_local_quotes = [q for q in local_quotes if q.get("type", "") == quote_type]
+        if not available_local_quotes:
+            print(f"  (No quotes of type '{quote_type}' available in local database)")
+            available_local_quotes = local_quotes  # fallback to all quotes
+    else:
+        available_local_quotes = local_quotes
+    
     # 过滤已显示过的引用
-    available_quotes = [q for q in local_quotes if q["content"] not in used_quotes]
+    available_quotes = [q for q in available_local_quotes if q["content"] not in used_quotes]
     
     # 如果所有引用都已显示，重置已用引用集合
     if not available_quotes:
-        print("  (All quotes shown, resetting used quotes list)")
+        print(f"  (All quotes of type '{quote_type}' shown, resetting used quotes list)")
         used_quotes = set()
-        available_quotes = local_quotes
+        available_quotes = available_local_quotes
     
     # 随机选择一个引用
     selected_quote = random.choice(available_quotes)
-    
-    # 记录已显示的引用
-    used_quotes.add(selected_quote["content"])
-    save_used_quotes(used_quotes)
     
     try:
         resp = requests.get(
@@ -151,13 +160,16 @@ def fetch_random_quote() -> Optional[dict]:
             "author": author,
             "tags": q.get("tags", []),
         }
-        # 检查API返回的引用是否已使用
-        if api_quote["content"] not in used_quotes:
+        # 检查API返回的引用是否符合类型要求和是否已使用
+        if (not quote_type or any(tag in ["poetry", "poem", "literature"] for tag in api_quote["tags"])) and api_quote["content"] not in used_quotes:
             used_quotes.add(api_quote["content"])
             save_used_quotes(used_quotes)
             return api_quote
         else:
-            print("  (API returned a repeated quote, using local quote)")
+            if quote_type:
+                print(f"  (API returned a quote not matching type '{quote_type}', using local quote)")
+            else:
+                print("  (API returned a repeated quote, using local quote)")
             return selected_quote
     except Exception as e:
         print(f"  (Quotable API unavailable: {e})")
@@ -246,12 +258,18 @@ Examples:
   python3 _scripts/quotes.py "perseverance" --movie-lines
   python3 _scripts/quotes.py "success" --limit 10 --save
   python3 _scripts/quotes.py --random  # Get a random quote
+  python3 _scripts/quotes.py --poem  # Get a random poem (for daily poetry)
 """,
     )
     parser.add_argument(
         "--random", "-r",
         action="store_true",
         help="Get a random inspirational quote (ignores other arguments)",
+    )
+    parser.add_argument(
+        "--poem", "-p",
+        action="store_true",
+        help="Get a random poem (Chinese classic poems)",
     )
     parser.add_argument(
         "topic",
@@ -297,6 +315,18 @@ Examples:
             print(f'"{content}" — {author_name}')
         else:
             print("Failed to fetch a random quote.")
+        return
+    
+    # Handle poem request
+    if args.poem:
+        print("Getting a random poem...")
+        quote = fetch_random_quote(quote_type="诗词")
+        if quote:
+            content = quote.get("content", "").strip()
+            author_name = quote.get("author", "Unknown")
+            print(f'"{content}" — {author_name}')
+        else:
+            print("Failed to fetch a random poem.")
         return
 
     query = args.author or args.topic or "inspiration"
