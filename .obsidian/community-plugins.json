@@ -2,5 +2,6 @@
   "dataview",
   "templater-obsidian",
   "obsidian-git",
-  "remotely-save"
+  "remotely-save",
+  "cubox-sync"
 ]
