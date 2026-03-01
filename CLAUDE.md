@@ -35,7 +35,17 @@ This vault maps directly to the PAI pyramid. Understanding this structure explai
 ## Prerequisites
 
 - **Python 3.8+** with dependencies: `pip install -r _scripts/requirements.txt`
-- **ARK_API_KEY** in `.env` file (Volcengine Ark API — the sole AI backend)
+- `.env` file in vault root with required API keys (see Architecture → AI Backend)
+
+## Development Workflow
+
+Run any script directly to test it:
+```bash
+python3 _scripts/arxiv_digest.py          # Test a content script
+python3 _scripts/config.py               # Verify AI backend config (prints env check)
+```
+
+Scripts print to stdout and optionally save to vault via `--save` or `--no-save` flags. There are no automated tests; validate by running the script and checking its output.
 
 ## Skills (Claude Code Slash Commands)
 
@@ -196,10 +206,36 @@ python3 _scripts/review_system.py [--monthly|--quarterly] [--save]    # Monthly/
 
 ### AI Backend
 
-All AI processing uses **Volcengine Ark** (OpenAI-compatible API) configured in `_scripts/config.py`:
-- Endpoint: `https://ark.cn-beijing.volces.com/api/coding/v1`
-- Model: `ark-code-latest`
-- Client: OpenAI SDK with custom base_url
+All AI processing uses the **OpenAI SDK** with two active backends, configured in `_scripts/config.py`. Both are used — DeepSeek as the cost-effective default, Ark (`ark-code-latest`) for higher-quality or code-focused tasks.
+
+| Backend | Variable | Default model | Default? |
+|---------|----------|---------------|----------|
+| DeepSeek | `DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL` | `deepseek-chat` | **Yes** |
+| Volcengine Ark | `ARK_API_KEY` | `ark-code-latest` | No (explicit) |
+
+Scripts can override the backend by passing a model name to `summarize()`. Use `ark_ai` directly for tasks where `ark-code-latest` is preferred.
+
+Required `.env` keys (no `.env.example` exists — configure manually):
+
+```
+# AI (both required)
+DEEPSEEK_API_KEY=
+DEEPSEEK_BASE_URL=https://api.deepseek.com  # optional override
+DEEPSEEK_MODEL=deepseek-chat                # optional override
+ARK_API_KEY=                               # Volcengine Ark (ark-code-latest)
+
+# Publishing
+BEARBLOG_USER=
+BEARBLOG_PASSWORD=
+
+# Integrations (optional, per-skill)
+THINGS_AUTH_TOKEN=    # Things 3 macOS
+CUBOX_API_URL=        # Cubox RSS sync
+NEWS_API_KEY=         # NewsAPI
+GNEWS_API_KEY=        # GNews
+BILIBILI_SESSDATA=    # Bilibili video login
+BILIBILI_USER_AGENT=
+```
 
 ### Shared Utilities (`_scripts/config.py`)
 
